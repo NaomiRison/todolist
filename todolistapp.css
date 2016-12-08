@@ -1,0 +1,102 @@
+
+
+
+#container{
+	
+	width:360px; 
+	margin: 100px auto;
+	border: 2px rgba(0,0,0,0.3);
+	background:   #f9e79f;
+
+}
+/*add width so background color does not go
+all the way across
+
+center margin left=0 right=0 auto*/
+/*class created in css, when used in js file 
+dont need the dot*/
+.completed{
+	color:red;
+	text-decoration: line-through;
+}
+h1{
+	background:  #1abc9c;
+	color:  #7d3c98;
+	margin:0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: normal;
+
+}
+
+/*now getting rid pg bullet points from ul*/
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Dosis', sans-serif;
+
+}
+
+
+li{
+	background:   #ccd1d1;
+	padding-bottom: 10px;
+}
+/*every even li has the color #f9e79f */
+li:nth-child(2n){
+	background: #f9e79f;
+}
+/*below is text bar*/
+input{
+	font-size: 18px;
+	background-color: #f9e79f;
+	padding: 13px 20px;
+	width:88%;
+	color:  #7d3c98;
+}
+input:hover{
+	background: #ccd1d1;
+	border:3px solid blue;
+	outline: none;
+}
+/*below from http://uigradients.com/#*/
+body{
+	background: #fc00ff; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fc00ff , #00dbde); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fc00ff , #00dbde); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+.fa-plus{
+	float: right;
+}
+/*trash icons in span*/
+span{
+	background-color: #e74c3c;
+	height:40px;
+	margin-right: 20px;
+	color: white;
+	width:0;
+	display: inline-block;
+	text-align: center;
+	opacity: 0;
+}
+/*
+opacity 0 means the icon will not be seen at all
+margin-right: 20px;
+this moves li 20 px to the right from icon
+text-align: center
+this centers trash can icon
+in box of height 40px
+and width of 0*/
+
+/*when user hovers over li, select span
+the width of box expands to 40px and 
+is seen with opacity: 1.0;*/
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
