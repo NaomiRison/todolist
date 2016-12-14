@@ -16,24 +16,8 @@ $("ul").on("click","li",function(){
 // this refers to li that was clicked
 
 //click on span, x to delete to do list item
-$("ul").on("click","span",function(event){
-	// to Stop the click event from
-	// bubbling to parent elements like li, ul, div and body:
-	// preventing any 
-	//parent event handlers from being executed.
-	//passing event: tell the event in the span to not trigger any
-	//other events on parent element
-	//Syntax
-     //event.stopPropagation() 
-	//event refers to the click event
-	//to prevent the clicking event from happening
-	// when u click on other elements
-	//besides a span element
-	
-	event.stopPropagation();
-	//this refers to span clicked on
-	// The parent() method returns the 
-	//direct parent element of the selected element.
+$("ul").on("click","span",function(){
+
 	$(this).parent().fadeOut(1000,function(){
 		//just fading out method does not remove it
 		$(this).remove();
@@ -64,12 +48,12 @@ $("input[type=text]").keypress(function(event){
 			 $(this).val("");
 		}
 });
-$('h1').funText(10, 'reverseCandy');
+
 
 //when we click the plus icon text box should
 // fade in and out, toggle
 $(".fa-plus").click(function(){
-    ("input[type='text']").fadeToggle();
+    $("input[type='text']").fadeToggle();
 
 });
 
