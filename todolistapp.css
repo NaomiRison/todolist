@@ -20,7 +20,7 @@ dont need the dot*/
 	text-decoration: line-through;
 }
 h1{
-	background:  #1abc9c;
+	background:  #1abc9c; 
 	color:  #7d3c98;
 	margin:0;
 	padding: 20px 20px;
@@ -79,6 +79,8 @@ span{
 	margin-right: 20px;
 	color: white;
 	width:0;
+	/*so that trash cans wont appear on top of text
+	 but next to it, display: inline-block; */
 	display: inline-block;
 	text-align: center;
 	opacity: 0;
@@ -98,4 +100,28 @@ is seen with opacity: 1.0;*/
 li:hover span{
 	width: 40px;
 	opacity: 1.0;
+}
+
+@media(max-width: 480px){
+	#container{
+	
+	width:360px; 
+	margin: 80px 0;
+}
+h1{
+	
+	margin:0;
+	padding: 10px 10px;
+	
+	font-size: 20px;
+	
+
+}
+body{
+	background: #fc00ff; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fc00ff , #00dbde); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fc00ff , #00dbde); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
 }

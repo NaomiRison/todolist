@@ -5,13 +5,13 @@ $(document).ready(function(){
 	//using on instead of click- why?
 	// so when we add new li's the toggleClass('completed')
 	// works on new added items
-$("ul").on("click","li",function(){
+	$("ul").on("click","li",function(){
 	// passing class from css file so dont
 	// need the dot, "." only for elements from
 	// html file
 	//notice how $(this) does not need paranthese
-  $(this).toggleClass("completed");
-  });
+ 	 $(this).toggleClass("completed");
+  	});
 });
 // this refers to li that was clicked
 
@@ -19,6 +19,7 @@ $("ul").on("click","li",function(){
 $("ul").on("click","span",function(){
 
 	$(this).parent().fadeOut(1000,function(){
+		
 		//just fading out method does not remove it
 		$(this).remove();
 		// when u click on span $this refers to span
